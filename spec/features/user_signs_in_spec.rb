@@ -9,7 +9,7 @@ feature 'user signs in' do
       click_link 'Sign In'
       fill_in 'Email', with: user.email
       fill_in 'Password', with: user.password
-      click_button 'Log in'
+      click_button 'Sign In'
 
       expect(page).to have_content('Sign Out')
       expect(page).to have_content('Welcome back!')
@@ -33,7 +33,7 @@ feature 'user signs in' do
       click_link 'Sign In'
       fill_in 'Email', with: user.email
       fill_in 'Password', with: 'dogcatmeowwoof'
-      click_button 'Log in'
+      click_button 'Sign in'
 
       expect(page).to have_content('Forgot your password?')
       expect(page).to_not have_content('Sign Out')
@@ -43,7 +43,7 @@ feature 'user signs in' do
       visit new_user_session_path
       fill_in 'Email', with: user.email
       fill_in 'Password', with: user.password
-      click_button 'Log in'
+      click_button 'Sign In'
 
       expect(page).to have_content('Sign Out')
       expect(page).to_not have_content('Sign In')
