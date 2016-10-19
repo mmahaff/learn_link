@@ -7,9 +7,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def create
-  end 
-
   private
 
   def user_params
