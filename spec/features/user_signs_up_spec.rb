@@ -8,6 +8,7 @@ feature 'user creates account' do
       click_link 'Sign Up'
       fill_in 'First Name', with: "Sally"
       fill_in 'Last Name', with: "Smith"
+      choose('Student')
       fill_in 'Email', with: "hello@hello.com"
       fill_in 'Password', with: "password"
       fill_in 'Password confirmation', with: "password"
