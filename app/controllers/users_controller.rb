@@ -8,7 +8,8 @@ class UsersController < ApplicationController
   end
 
   def edit
-  end 
+    @user = current_user
+  end
 
   private
 
