@@ -37,12 +37,9 @@ ActiveRecord::Schema.define(version: 20161020175926) do
     t.boolean  "is_student",                                null: false
     t.string   "city"
     t.string   "state"
-    t.integer  "location_id"
     t.string   "role",                   default: "member", null: false
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
-    t.index ["location_id"], name: "index_users_on_location_id", using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
-  add_foreign_key "users", "locations"
 end

@@ -1,1 +1,25 @@
-<h1>Edit Profile</h1>
+<div class="row">
+  <div class="small-6 large-6 small-centered columns edit_profile_box">
+    <div class="row">
+      <div class="small-4 columns">
+
+      </div>
+      <div class="small-8 columns">
+        <h3> Edit Profile</h3>
+        <%= form_for (@user) do |f| %>
+          <%= f.label :city, "City" %>
+          <%= f.text_field :city %>
+
+          <%= f.label :state, "State" %>
+          <%= f.text_field :state %>
+
+          <%= f.submit "Edit" %>
+
+        <% end %>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
