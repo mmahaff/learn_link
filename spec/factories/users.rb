@@ -8,6 +8,5 @@ FactoryGirl.define do
     sequence(:password) { |n| "password#{n}" }
     is_student true
 
-    location
   end
 end
