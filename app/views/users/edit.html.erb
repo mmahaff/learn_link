@@ -10,12 +10,11 @@
           <%= f.label :city, "City" %>
           <%= f.text_field :city %>
 
+          <%= f.label :state, "State" %>
           <%= f.select :state, options_for_select(us_states), {}, class: 'form-control' %>
 
           <%= f.label :location, "Home Library" %>
           <%= f.text_field :location %>
-
-          <%= f.file_field :profile_photo %>
 
           <%= f.submit "Edit" %>
 

@@ -8,7 +8,7 @@ FactoryGirl.define do
     sequence(:password) { |n| "password#{n}" }
     is_student true
     sequence(:city) { |n| "Boston#{n}" }
-    sequence(:state) { |n| "MA#{n}" }
+    state 'SC'
     sequence(:location) { |n| "Library#{n}" }
 
   end
