@@ -1,9 +1,11 @@
 require 'rails_helper'
+include Warden::Test::Helpers
 
-feature 'user sees a user profile page' do
+feature 'authenticated user sees a user profile page' do
   let!(:user) { FactoryGirl.create(:user) }
 
-  scenario 'clicks link and is taken to show page for given user' do
+  scenario 'an authenticated user clicks link and is taken to show page for given user' do
+    login_as(user)
     visit users_path
 
     click_link user.first_name
