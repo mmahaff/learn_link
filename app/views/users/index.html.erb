@@ -1,8 +1,10 @@
 <div class="row">
-  <h1>List of Users</h1>
-
-  <% @users.each do |user| %>
-  <%= link_to user.first_name, user_path(user) %>
+  <h1>User List</h1>
+  <% if @user == current_user && @user.is_student? %>
+    <%= render "tutors" %>
+  <% else @user == current_user %>
+    <%= render "students" %>
   <% end %>
+
 
 </div>

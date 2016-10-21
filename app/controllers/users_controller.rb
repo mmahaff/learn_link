@@ -2,7 +2,12 @@ class UsersController < ApplicationController
   before_action :authorize_user, except: [:index]
 
   def index
-    @users = User.all
+    @user = current_user
+    if @user.is_student?
+      @users = User.where(is_student: false)
+    else
+      @users = User.where(is_student: true)
+    end
   end
 
   def show
@@ -23,6 +28,7 @@ class UsersController < ApplicationController
       render :edit
     end
   end
+
 
   private
 

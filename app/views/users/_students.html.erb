@@ -1,0 +1,5 @@
+<h1>Students</h1>
+
+<% @users.each do |user| %>
+  <%= link_to user.first_name, user_path(user) %>
+<% end %>

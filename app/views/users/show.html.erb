@@ -12,8 +12,14 @@
         <% end %>
         <ul>
           <li><%= @user.email %></li>
-          <li><%= @user.city %>, <%= @user.state %>
-          <li>Home Library: <%= @user.location %>
+          <li><%= @user.city %>, <%= @user.state %> </li>
+          <li>Home Library: <%= @user.location %> </li>
+
+          <% if @user.is_student? %>
+          <li><%= "Student" %></li>
+          <% else %>
+          <li><%= "Tutor" %></li>
+          <% end %>
         </ul>
       </div>
     </div>
