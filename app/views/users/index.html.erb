@@ -1,5 +1,8 @@
-<h1>List of Users</h1>
+<div class="row">
+  <h1>List of Users</h1>
 
-<% @users.each do |user| %>
-<%= link_to user.first_name, user_path(user) %>
-<% end %>
+  <% @users.each do |user| %>
+  <%= link_to user.first_name, user_path(user) %>
+  <% end %>
+
+</div>
