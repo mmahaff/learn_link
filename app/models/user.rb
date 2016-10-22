@@ -6,6 +6,16 @@ class User < ApplicationRecord
   validates :email, presence: true
   validates_inclusion_of :is_student, in: [true, false]
 
+  acts_as_messageable
+
+  def mailboxer_email(object)
+    nil
+  end
+
+  def name
+    "User #{id}"
+  end
+
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

@@ -12,6 +12,7 @@ gem 'carrierwave', '>= 1.0.0.beta', '<2.0'
 gem 'mini_magick'
 gem 'dotenv-rails'
 gem 'fog'
+gem 'mailboxer'
 group :development, :test do
   gem 'capybara'
   gem 'factory_girl_rails'
