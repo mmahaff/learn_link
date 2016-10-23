@@ -11,15 +11,14 @@
         <%= link_to "Edit Profile", edit_user_path %>
         <% end %>
         <ul>
-          <li><%= @user.email %></li>
-          <li><%= @user.city %>, <%= @user.state %> </li>
-          <li>Home Library: <%= @user.location %> </li>
-
           <% if @user.is_student? %>
           <li><%= "Student" %></li>
           <% else %>
           <li><%= "Tutor" %></li>
           <% end %>
+          <li>Home Library: <%= @user.location %> </li>
+          <li><%= @user.city %>, <%= @user.state %> </li>
+          <li><%= @user.email %></li>
         </ul>
       </div>
     </div>
