@@ -10,6 +10,5 @@ FactoryGirl.define do
     sequence(:city) { |n| "Boston#{n}" }
     state 'SC'
     sequence(:location) { |n| "Library#{n}" }
-
   end
 end

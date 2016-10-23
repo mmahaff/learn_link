@@ -1,5 +1,4 @@
 <div class="row">
-  <h1>User List</h1>
   <% if @user == current_user && @user.is_student? %>
     <%= render "tutors" %>
   <% else @user == current_user %>
