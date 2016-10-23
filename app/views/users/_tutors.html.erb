@@ -1,29 +1,15 @@
-<div class="row bump">
-  <div class="small-4 columns small-4 columns small-4 columns">
-    <div class="row">
-      <% @users.each do |user| %>
-      <div class="profile-card">
-
-        <div class="small-12 large-4 columns">
-          <a href="https://s3.amazonaws.com/uifaces/faces/twitter/BillSKenney/128.jpg">
-            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/BillSKenney/128.jpg" alt="profile image"> </a>
-          </div>
-          <div class="small-12 large-8 columns">
-            <h4><%= link_to user.first_name, user_path(user)%></h4>
-            <p><i class="fi-mail"></i><span><%= user.email %></p>
-              <p><i class="fi-mail"></i><span><%= user.city %>, <%= user.state%></p>
-                <p><i class="fi-mail"></i><span><%= user.location %></p>
-
-          </div>
-          <div class="row collapse">
-            <ul class="button-group even-2">
-              <li><a href="#" class="button">Default<span>123</span></a></li>
-              <li><a href="#" class="button">Default<span>123</span></a></li>
-            </ul>
-          </div>
-        </div>
+<div class="row">
+  <% @users.each do |user| %>
+  <div class="small-12 medium-4 columns profile-card">
+      <div class="small-12 columns">
+        <a href="https://s3.amazonaws.com/uifaces/faces/twitter/BillSKenney/128.jpg">
+          <img src="https://s3.amazonaws.com/uifaces/faces/twitter/BillSKenney/128.jpg" alt="profile image"> </a>
       </div>
-      <% end %>
-    </div>
+      <div class="small-12 columns">
+        <h4><%= link_to user.first_name, user_path(user)%></h4>
+        <p><%= user.city %>, <%= user.state%></p>
+        <p><%= user.location %></p>
+      </div>
   </div>
+  <% end %>
 </div>
