@@ -1,13 +1,10 @@
 <div class="row">
-<h1>All Conversations</h1>
+<h1>Your Conversations</h1>
 
-<% @conversations.each do |conversation| %>
+<a class="large button" href="messages/new" >Start conversation</a>
 
-  <div>
-    <%= link_to conversation.subject, conversation_path(conversation) %>
-  </div>
-<% end %>
+<%= render partial: 'conversations/conversation', collection: @conversations %>
 
-<%= link_to "New Conversation", new_conversation_path %>
+<%= will_paginate %>
 
 </div>

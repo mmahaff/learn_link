@@ -9,7 +9,7 @@ class User < ApplicationRecord
   acts_as_messageable
 
   def name
-    "User #{id}"
+    "User #{id}: " + "#{first_name} " + "#{last_name}"
   end
 
   def mailboxer_email(object)

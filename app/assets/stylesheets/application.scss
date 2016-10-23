@@ -18,6 +18,12 @@ $form-radius: $global-radius;
   padding: $form-padding;
   border-radius: $form-radius;
 }
+
+.messages {
+  max-height: 400px;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
 .bump{
   margin-top: 50px;
   padding-right: 30px;

@@ -5,8 +5,8 @@ Rails.application.routes.draw do
 
   resources :users, only: [:index, :show, :edit, :update]
 
-  resources :conversations do
-    resources :messages 
-  end
+  resources :conversations, only: [:index, :show, :destroy]
+
+  resources :messages, only: [:new, :create]
 
 end

@@ -1,16 +1,11 @@
 <h1><%= @conversation.subject %></h1>
-
-<% @conversation.receipts_for(current_user).each do |receipt| %>
-  <div>
-    <div><%= receipt.message.sender.name %> commented:</div>
-    <p><%= receipt.message.body %></p>
+<div class="row">
+  <div class="messages">
+    <% @conversation.receipts_for(current_user).each do |receipt| %>
+      <% message = receipt.message %>
+      <%= message.sender.name %>
+        says at <%= message.created_at.strftime("%-d %B %Y, %H:%M:%S") %>
+      <%= message.body %>
+    <% end  %>
   </div>
-<% end %>
-
-<%= form_tag conversation_messages_path(@conversation), method: :post do %>
-  <div>
-    <%= text_area_tag :body %>
-  </div>
-
-  <%= submit_tag %>
-<% end %>
+</div>
