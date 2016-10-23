@@ -8,4 +8,12 @@
       <%= message.body %>
     <% end  %>
   </div>
+  <%= form_tag reply_conversation_path(@conversation), method: :post do %>
+    <div>
+      <%= text_area_tag 'body', nil, class: 'form-control', placeholder: 'Reply here', required: true %>
+    </div>
+
+    <%= submit_tag "Send Message" %>
+  <% end  %>
+
 </div>

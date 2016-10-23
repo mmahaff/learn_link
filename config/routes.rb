@@ -5,7 +5,11 @@ Rails.application.routes.draw do
 
   resources :users, only: [:index, :show, :edit, :update]
 
-  resources :conversations, only: [:index, :show, :destroy]
+  resources :conversations, only: [:index, :show, :destroy] do
+    member do
+      post :reply
+    end
+  end
 
   resources :messages, only: [:new, :create]
 
