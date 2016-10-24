@@ -13,6 +13,9 @@ $form-padding: $global-padding;
 // Setting the form border radius
 $form-radius: $global-radius;
 
+body {
+  font-family: 'Vollkorn', serif;
+}
 .sign-up-form {
   border: 1px solid $form-border-color;
   padding: $form-padding;
