@@ -13,7 +13,7 @@
 
   <div>
     <%= label_tag 'recipients', 'Send to:' %>
-    <%= select_tag 'recipients', recipients_options, multiple: true, class: 'form-control'%>
+    <%= select_tag 'recipients', recipients_options(@chosen_recipient), multiple: true, class: 'form-control chosen-it'%>
   </div>
 
   <%= submit_tag 'Send'%>
