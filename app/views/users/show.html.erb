@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="small-6 large-6 small-centered columns profile_box">
+    <div class="row">
+      <div class="small-4 columns">
+        <img class="profile-circle" src="http://api.randomuser.me/portraits/med/women/82.jpg">
+      </div>
+      <div class="small-8 columns">
+
+        <h1><%= @user.first_name%> <%=@user.last_name%></h1>
+        <% if @user == current_user %>
+        <%= link_to "Edit Profile", edit_user_path %>
+        <% end %>
+        <ul>
+          <% if @user.is_student? %>
+          <li><%= "Student" %></li>
+          <% else %>
+          <li><%= "Tutor" %></li>
+          <% end %>
+          <li>Home Library: <%= @user.location %> </li>
+          <li><%= @user.city %>, <%= @user.state %> </li>
+          <li><%= @user.email %></li>
+        </ul>
+        <p><% if @user != current_user %>
+          <%= link_to 'Send message', new_message_path(to: @user.id) %>
+        <% end %></p>
+      </div>
+      <hr>
+      <p>About me: <%= @user.about_me %></p>
+      <p>Languages spoken: <%= @user.language %></p>
+      <% if @user.is_student? %>
+        <p>Looking for help with: <%= @user.subject %></p>
+      <% else %>
+        <p>Available to help with: <%= @user.subject %></p>
+        <% end %>
+    </div>
+  </div>
+</div>

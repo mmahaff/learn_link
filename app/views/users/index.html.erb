@@ -1,0 +1,9 @@
+<div class="row">
+  <% if @user == current_user && @user.is_student? %>
+    <%= render "tutors" %>
+  <% else @user == current_user %>
+    <%= render "students" %>
+  <% end %>
+
+
+</div>

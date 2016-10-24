@@ -9,6 +9,13 @@ gem 'jquery-rails'
 gem 'listen'
 gem 'foundation-rails'
 gem 'devise'
+gem 'carrierwave', '>= 1.0.0.beta', '<2.0'
+gem 'mini_magick'
+gem 'dotenv-rails'
+gem 'fog'
+gem 'mailboxer'
+gem 'will_paginate', '~> 3.1.0'
+gem 'faker'
 group :development, :test do
   gem 'capybara'
   gem 'factory_girl_rails'
@@ -26,3 +33,5 @@ end
 group :production do
   gem 'rails_12factor'
 end
+
+ruby "2.3.1"

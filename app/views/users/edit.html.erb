@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="small-6 large-6 small-centered columns edit_profile_box">
+    <div class="row">
+      <div class="small-4 columns">
+
+      </div>
+      <div class="small-8 columns">
+        <h3> Edit Profile</h3>
+        <%= form_for (@user) do |f| %>
+          <%= f.label :city, "City" %>
+          <%= f.text_field :city %>
+
+          <%= f.label :state, "State" %>
+          <%= f.select :state, options_for_select(us_states), {}, class: 'form-control' %>
+
+          <%= f.label :location, "Home Library" %>
+          <%= f.text_field :location %>
+
+          <%= f.label :about_me, "Tell us about yourself" %>
+          <%= f.text_field :about_me %>
+
+          <%= f.submit "Edit" %>
+
+        <% end %>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
