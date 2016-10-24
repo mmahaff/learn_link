@@ -22,6 +22,13 @@
         </ul>
       </div>
       <hr>
+      <p>About me: <%= @user.about_me %></p>
+      <p>Languages spoken: <%= @user.language %></p>
+      <% if @user.is_student? %>
+        <p>Looking for help with: <%= @user.subject %></p>
+      <% else %>
+        <p>Available to help with: <%= @user.subject %></p>
+        <% end %>
     </div>
   </div>
 </div>
