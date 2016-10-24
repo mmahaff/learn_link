@@ -18,3 +18,32 @@ $form-radius: $global-radius;
   padding: $form-padding;
   border-radius: $form-radius;
 }
+
+.messages {
+  max-height: 400px;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+.bump{
+  margin-top: 50px;
+  padding-right: 30px;
+  padding-left:30px;
+}
+
+.profile-circle {
+  border: 5px solid $white;
+  border-radius: 50%;
+  height: 150px;
+  box-shadow: 5px 5px 5px $black;
+  overflow: hidden;
+  position: relative;
+  width: 150px;
+}
+
+.profile-card {
+  border: 5px solid #466d98;
+}
+
+.profile-list-image {
+  border-radius: 50%;
+}

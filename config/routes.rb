@@ -3,6 +3,14 @@ Rails.application.routes.draw do
 
   root "home#index"
 
-  resources :users, only: [:index]
+  resources :users, only: [:index, :show, :edit, :update]
+
+  resources :conversations, only: [:index, :show, :destroy] do
+    member do
+      post :reply
+    end
+  end
+
+  resources :messages, only: [:new, :create]
 
 end
