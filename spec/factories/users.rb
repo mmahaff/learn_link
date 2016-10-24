@@ -7,8 +7,5 @@ FactoryGirl.define do
     sequence(:email) { |n| "person#{n}@example.com" }
     sequence(:password) { |n| "password#{n}" }
     is_student true
-    sequence(:city) { |n| "Boston#{n}" }
-    state 'SC'
-    sequence(:location) { |n| "Library#{n}" }
   end
 end
