@@ -1,9 +1,14 @@
 <div id="row">
-  <h1> Learn Link </h1>
+  <% if user_signed_in? %>
+    <h1> Learn Link </h1>
+
+  <% else %>
+
   <div id=".small-6 large-6 columns">
+    <h1> Learn Link </h1>
   </div>
   <div id="small-6 large-6 columns">
         <a class="large button" href="users/sign_up" >Sign Up Here!</a>
-
   </div>
+  <% end %>
 </div>

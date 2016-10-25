@@ -13,12 +13,24 @@
   </head>
 
   <body>
-    <nav>
-      <% if user_signed_in? %>
-        <%= render "nav_signed_in" %>
-      <% else %>
-        <%= render "nav_sign_up" %>
-      <% end  %>
+    <nav class="top-bar" data-topbar role='navigation'>
+      <ul class="title-area">
+        <li class="learnlink title">
+          <h1><%= link_to 'LearnLink', root_path %></h1>
+        <% if user_signed_in? %>
+        <section class="top-bar-section">
+          <ul class="right">
+            <li class="active"><%= link_to 'Your Profile', user_path(current_user) %></li>
+            <li class="active"><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
+        </section>
+        <% else %>
+        <section class="top-bar-section">
+          <ul class="right">
+            <li class="active"><%= link_to 'Sign In', new_user_session_path %></li>
+            <li class="active"><%= link_to 'Sign Up', new_user_registration_path %></li>
+        </section>
+        <% end %>
+      </ul>
     </nav>
     <p class="notice"> <%= notice %> </p>
     <p class="alert">  <%= alert %> </p>
