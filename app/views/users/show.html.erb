@@ -6,20 +6,24 @@
       </div>
       <div class="small-8 columns">
 
-        <h1><%= @user.first_name%> <%=@user.last_name%></h1>
-        <% if @user == current_user %>
-        <%= link_to "Edit Profile", edit_user_path, class: 'button' %>
-        <% end %>
-        <ul>
-          <% if @user.is_student? %>
-          <li><%= "Student" %></li>
-          <% else %>
-          <li><%= "Tutor" %></li>
+        <h1 class="profile-name"><%= @user.first_name%> <%=@user.last_name%></h1>
+        <div class="small-8 columns">
+          <ul>
+            <% if @user.is_student? %>
+            <li><%= "Student" %></li>
+            <% else %>
+            <li><%= "Tutor" %></li>
+            <% end %>
+            <li>Home Library: <%= @user.location %> </li>
+            <li><%= @user.city %> <%= @user.state %> </li>
+            <li><%= @user.email %></li>
+          </ul>
+        </div>
+        <div class="small-4 columns">
+          <% if @user == current_user %>
+            <%= link_to "Edit Profile", edit_user_path, class: 'button' %>
           <% end %>
-          <li>Home Library: <%= @user.location %> </li>
-          <li><%= @user.city %>, <%= @user.state %> </li>
-          <li><%= @user.email %></li>
-        </ul>
+        </div>
         <p><% if @user != current_user %>
           <%= link_to 'Send message', new_message_path(to: @user.id), class: 'button' %>
         <% end %></p>

@@ -46,10 +46,18 @@ body {
 
 .profile-card {
   border: 5px solid #466d98;
+  text-align: center;
+  background-color: #F2F2F2;
+  padding-top: 15px;
+  padding-bottom: 10px;
 }
 
 .profile-list-image {
   border-radius: 50%;
+  width: 40%;
+  height: 40%;
+  display: block;
+  margin: auto;
 }
 
 .title-area {
@@ -58,4 +66,9 @@ body {
 
 .right {
   list-style-type: none;
+}
+
+.profile-name {
+
+  margin-bottom: 35px;
 }
