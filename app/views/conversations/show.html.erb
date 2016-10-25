@@ -1,19 +1,25 @@
-<h1><%= @conversation.subject %></h1>
 <div class="row">
-  <div class="messages">
-    <% @conversation.receipts_for(current_user).each do |receipt| %>
-      <% message = receipt.message %>
-      <%= message.sender.name %>
-        says at <%= message.created_at.strftime("%-d %B %Y, %H:%M:%S") %>
-      <%= message.body %>
-    <% end  %>
-  </div>
-  <%= form_tag reply_conversation_path(@conversation), method: :post do %>
-    <div>
-      <%= text_area_tag 'body', nil, class: 'form-control', placeholder: 'Reply here', required: true %>
+  
+
+
+
+  <h1><%= @conversation.subject %></h1>
+  <div class="row">
+    <div class="messages">
+      <% @conversation.receipts_for(current_user).each do |receipt| %>
+        <% message = receipt.message %>
+        <%= message.sender.name %>
+          says at <%= message.created_at.strftime("%-d %B %Y, %H:%M:%S") %>
+        <%= message.body %>
+      <% end  %>
     </div>
+    <%= form_tag reply_conversation_path(@conversation), method: :post do %>
+      <div>
+        <%= text_area_tag 'body', nil, class: 'form-control', placeholder: 'Reply here', required: true %>
+      </div>
 
-    <%= submit_tag "Send Message" %>
-  <% end  %>
+      <%= submit_tag "Send Message" %>
+    <% end  %>
 
+  </div>
 </div>

@@ -29,13 +29,19 @@
         <% end %></p>
       </div>
       <hr>
-      <p>About me: <%= @user.about_me %></p>
-      <p>Languages spoken: <%= @user.language %></p>
-      <% if @user.is_student? %>
-        <p>Looking for help with: <%= @user.subject %></p>
-      <% else %>
-        <p>Available to help with: <%= @user.subject %></p>
-        <% end %>
+      <div class="row">
+        <div class="small-4 columns profile-body"
+        <p>About me: <%= @user.about_me %></p>
+        <p>Languages spoken: <%= @user.language %></p>
+        <% if @user.is_student? %>
+          <p>Looking for help with: <%= @user.subject %></p>
+        <% else %>
+          <p>Available to help with: <%= @user.subject %></p>
+          <% end %>
+        </div>
+        <div class="small-8 columns profile-body">
+        </div>
+      </div>
     </div>
   </div>
 </div>
