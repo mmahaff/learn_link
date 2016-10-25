@@ -5,6 +5,7 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   validates :email, presence: true
   validates_inclusion_of :is_student, in: [true, false]
+  has_many :microposts
 
   acts_as_messageable
 

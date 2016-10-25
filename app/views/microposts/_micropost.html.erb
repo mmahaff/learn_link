@@ -1,0 +1,6 @@
+<li id="micropost- <%= micropost.id %> " >
+
+  <%= link_to micropost.user.first_name, micropost.user %>
+  <%= micropost.content %>
+  Posted <%= time_ago_in_words(micropost.created_at) %> ago
+</li>
