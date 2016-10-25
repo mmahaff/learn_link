@@ -17,20 +17,23 @@
       <ul class="title-area">
         <li class="learnlink title">
           <h1><%= link_to 'LearnLink', root_path %></h1>
+        </li>
+      </ul>
         <% if user_signed_in? %>
-        <section class="top-bar-section">
+        <section class="top-bar-section right">
           <ul class="right">
             <li class="active"><%= link_to 'Your Profile', user_path(current_user) %></li>
             <li class="active"><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
+          </ul>
         </section>
         <% else %>
-        <section class="top-bar-section">
+        <section class="top-bar-section right">
           <ul class="right">
             <li class="active"><%= link_to 'Sign In', new_user_session_path %></li>
             <li class="active"><%= link_to 'Sign Up', new_user_registration_path %></li>
+          </ul>
         </section>
         <% end %>
-      </ul>
     </nav>
     <p class="notice"> <%= notice %> </p>
     <p class="alert">  <%= alert %> </p>

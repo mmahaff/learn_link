@@ -8,13 +8,13 @@
 
         <h1 class="profile-name"><%= @user.first_name%> <%=@user.last_name%></h1>
         <div class="small-8 columns">
-          <ul>
+          <ul class="profile-head">
             <% if @user.is_student? %>
-            <li><%= "Student" %></li>
+            <li>Student at <%= @user.location %></li>
             <% else %>
-            <li><%= "Tutor" %></li>
+            <li>Tutor at <%= @user.location %></li>
             <% end %>
-            <li>Home Library: <%= @user.location %> </li>
+
             <li><%= @user.city %> <%= @user.state %> </li>
             <li><%= @user.email %></li>
           </ul>
@@ -30,13 +30,17 @@
       </div>
       <hr>
       <div class="row">
-        <div class="small-4 columns profile-body"
-        <p>About me: <%= @user.about_me %></p>
-        <p>Languages spoken: <%= @user.language %></p>
+        <div class="small-4 columns profile-body">
+        <h5>About me:</h5>
+        <p><%= @user.about_me %></p>
+        <h5>Languages spoken:</h5>
+        <p><%= @user.language %></p>
         <% if @user.is_student? %>
-          <p>Looking for help with: <%= @user.subject %></p>
+          <h5>Looking for help with:</h5>
+          <p><%= @user.subject %></p>
         <% else %>
-          <p>Available to help with: <%= @user.subject %></p>
+          <h5>Available to help with:</h5>
+          <p><%= @user.subject %></p>
           <% end %>
         </div>
         <div class="small-8 columns profile-body">
