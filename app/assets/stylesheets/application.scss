@@ -50,6 +50,7 @@ body {
   background-color: #F2F2F2;
   padding-top: 15px;
   padding-bottom: 10px;
+
 }
 
 .profile-list-image {
@@ -64,8 +65,8 @@ body {
   list-style-type: none;
 }
 
-.right {
-  list-style-type: none;
+.profile-show {
+  margin-top: 5%;
 }
 
 .profile-name {
@@ -75,4 +76,30 @@ body {
 .profile-head {
   list-style-type: none;
 
+}
+.top-bar {
+  display: flex;
+  align-items: center;
+}
+nav ul li{
+  list-style-type: none;
+  // display: inline-block;
+}
+
+nav ul li a {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.nav-links {
+  ul.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    li {
+      width: 30%;
+      text-align: center;
+    }
+  }
+  // text-align: center;
 }
