@@ -15,6 +15,7 @@ $form-radius: $global-radius;
 
 body {
   font-family: 'Vollkorn', serif;
+  background-color: #FFFFFF;
 }
 .sign-up-form {
   border: 1px solid $form-border-color;
@@ -36,11 +37,11 @@ body {
 .profile-circle {
   border: 5px solid $white;
   border-radius: 50%;
-  height: 150px;
+  height: 175px;
   box-shadow: 5px 5px 5px $black;
   overflow: hidden;
   position: relative;
-  width: 150px;
+  width: 175px;
 }
 
 .profile-card {
@@ -49,4 +50,12 @@ body {
 
 .profile-list-image {
   border-radius: 50%;
+}
+
+.title-area {
+  list-style-type: none;
+}
+
+.right {
+  list-style-type: none;
 }
