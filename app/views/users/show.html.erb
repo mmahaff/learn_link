@@ -45,10 +45,10 @@
         </div>
         <div class="small-8 columns profile-body">
           <% if @user.microposts.any? %>
-          <h3>My Posts </h3>
-          <ol class="microposts">
+
+          <ul class="microposts">
             <%= render @microposts %>
-          </ol>
+          </ul>
           <%= will_paginate @microposts %>
           <% end %>
         </div>

@@ -17,6 +17,10 @@ class User < ApplicationRecord
     return "define_email@on_your.model"
   end
 
+  def feed
+    Micropost.where("user_id = ?", id)
+  end
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
