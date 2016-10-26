@@ -2,16 +2,20 @@
   <div class="small-12 small-centered medium-7 medium-centered">
 
     <div class="row">
-      <h2><%= @conversation.subject %></h2>
       <div class="messages">
-        <% @conversation.receipts_for(current_user).each do |receipt| %>
+        <h2><%= @conversation.subject %></h2>
 
-          <% message = receipt.message %>
-          <h4><%= message.sender.name %></h4>
-            says at <%= message.created_at.strftime("%-d %B %Y, %H:%M:%S") %>
-          <p><%= message.body %><p>
+        <% @conversation.receipts_for(current_user).each do |receipt| %>
+          <div class="message-block">
+
+            <% message = receipt.message %>
+            <h4><%= message.sender.name %></h4>
+              says at <%= message.created_at.strftime("%-d %B %Y, %H:%M:%S") %>
+            <p><%= message.body %><p>
+          </div>
         <% end  %>
       </div>
+      <div class="message-reply">
       <%= form_tag reply_conversation_path(@conversation), method: :post do %>
         <div>
           <%= text_area_tag 'body', nil, class: 'form-control', placeholder: 'Reply here', required: true %>
@@ -19,6 +23,7 @@
 
         <%= submit_tag "Send Message" %>
       <% end  %>
+    </div>
 
     </div>
   </div>
