@@ -11,8 +11,14 @@ feature 'user signs in' do
       fill_in 'Password', with: user.password
       click_button 'Sign In'
 
-      expect(page).to have_content('Sign Out')
+      expect(page).to have_content('LearnLink')
+      expect(page).to have_content('Your Profile')
+      expect(page).to have_content('People Near You')
+      expect(page).to have_content('Conversations')
+      expect(page).to have_content('Log Out')
       expect(page).to have_content('Welcome back!')
+
+
     end
 
     scenario 'a nonexistent email and password is supplied' do
@@ -24,7 +30,7 @@ feature 'user signs in' do
 
       expect(page).to have_content('Forgot your password?')
       expect(page).to_not have_content('Welcome back!')
-      expect(page).to_not have_content('Sign Out')
+      expect(page).to_not have_content('Log Out')
     end
 
     scenario 'an existing email with the wrong password is denied access' do
@@ -36,7 +42,7 @@ feature 'user signs in' do
       click_button 'Sign In'
 
       expect(page).to have_content('Forgot your password?')
-      expect(page).to_not have_content('Sign Out')
+      expect(page).to_not have_content('Log Out')
     end
 
     scenario 'an already authenticated user cannot re-sign in' do
@@ -45,7 +51,7 @@ feature 'user signs in' do
       fill_in 'Password', with: user.password
       click_button 'Sign In'
 
-      expect(page).to have_content('Sign Out')
+      expect(page).to have_content('Log Out')
       expect(page).to_not have_content('Sign In')
     end
   end
