@@ -46,6 +46,11 @@ body {
   background-color: #F2F2F2;
   padding-top: 15px;
   padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 1%;
+  width: 275px;
+  height: 290px;
 
 }
 
@@ -98,4 +103,10 @@ nav ul li a {
       text-align: center;
     }
   }
+}
+.columns:last-child:not(:first-child) {
+  float: left;
+}
+.profile-index {
+  text-align: center;
 }

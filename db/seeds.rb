@@ -31,7 +31,8 @@ password: 'foobar6', password_confirmation: 'foobar6', is_student: false, city: 
 state: "MA", location: "Cambridge Public Library")
 
 user_7 = User.create!(first_name: "Hermione", last_name: "Granger", email: "example7@example.com",
-password: 'foobar7', password_confirmation: 'foobar7', is_student: false)
+password: 'foobar7', password_confirmation: 'foobar7', is_student: false, city: "Somerville",
+state: "MA", location: "Somerville Public Library")
 
 user_8 = User.create!(first_name: "Michael", last_name: "Scott", email: "example8@example.com",
 password: 'foobar', password_confirmation: 'foobar', is_student: true, city: "Scranton",
@@ -58,4 +59,61 @@ password: 'foobar', password_confirmation: 'foobar', is_student: false, city: "C
 state: "MA", location: "Cambridge Public Library")
 
 user_14 = User.create!(first_name: "Jim", last_name: "Halpert", email: "example14@example.com",
-password: 'foobar', password_confirmation: 'foobar', is_student: false)
+password: 'foobar', password_confirmation: 'foobar', is_student: false, city: "Somerville",
+state: "MA", location: "Somerville Public Library")
+
+user_15 = User.create!(first_name: "Stan", last_name: "Smith", email: "example15@example.com",
+password: 'foobar', password_confirmation: 'foobar', is_student: true, city: "Boston",
+state: "MA", location: "Boston Public Library")
+
+user_16 = User.create!(first_name: "Bob", last_name: "Bailey", email: "example16@example.com",
+password: 'foobar', password_confirmation: 'foobar', is_student: false, city: "Boston",
+state: "MA", location: "Boston Public Library")
+
+user_17 = User.create!(first_name: "Sally", last_name: "Armstrong", email: "example17@example.com",
+password: 'foobar', password_confirmation: 'foobar', is_student: true, city: "Boston",
+state: "MA", location: "Boston Public Library")
+
+user_18 = User.create!(first_name: "Margaret", last_name: "Riley", email: "example18@example.com",
+password: 'foobar', password_confirmation: 'foobar', is_student: false, city: "Boston",
+state: "MA", location: "Boston Public Library")
+
+user_19 = User.create!(first_name: "Fred", last_name: "Weasley", email: "example19@example.com",
+password: 'foobar', password_confirmation: 'foobar', is_student: true, city: "Cambridge",
+state: "MA", location: "Cambridge Public Library")
+
+user_20 = User.create!(first_name: "Harrison", last_name: "Woodworth", email: "example20@example.com",
+password: 'foobar', password_confirmation: 'foobar', is_student: false, city: "Cambridge",
+state: "MA", location: "Cambridge Public Library")
+
+user_21 = User.create!(first_name: "Katherine", last_name: "Granger", email: "example21@example.com",
+password: 'foobar', password_confirmation: 'foobar', is_student: false, city: "Somerville",
+state: "MA", location: "Somerville Public Library")
+
+user_22 = User.create!(first_name: "Mike", last_name: "Scott", email: "example22@example.com",
+password: 'foobar', password_confirmation: 'foobar', is_student: true, city: "Scranton",
+state: "PA", location: "Scranton Public Library")
+
+user_23 = User.create!(first_name: "Pamela", last_name: "Baker", email: "example23@example.com",
+password: 'foobar', password_confirmation: 'foobar', is_student: false, city: "Boston",
+state: "MA", location: "Boston Public Library")
+
+user_24 = User.create!(first_name: "Rebecca", last_name: "James", email: "example24@example.com",
+password: 'foobar', password_confirmation: 'foobar', is_student: true, city: "Boston",
+state: "MA", location: "Boston Public Library")
+
+user_25 = User.create!(first_name: "Anne", last_name: "Carter", email: "example25@example.com",
+password: 'foobar', password_confirmation: 'foobar', is_student: false, city: "Boston",
+state: "MA", location: "Boston Public Library")
+
+user_26 = User.create!(first_name: "Nathan", last_name: "Trotter", email: "example26@example.com",
+password: 'foobar', password_confirmation: 'foobar', is_student: true, city: "Cambridge",
+state: "MA", location: "Cambridge Public Library")
+
+user_27 = User.create!(first_name: "Vincent", last_name: "James", email: "example27@example.com",
+password: 'foobar', password_confirmation: 'foobar', is_student: false, city: "Cambridge",
+state: "MA", location: "Cambridge Public Library")
+
+user_28 = User.create!(first_name: "Ian", last_name: "Mackenzie", email: "example28@example.com",
+password: 'foobar', password_confirmation: 'foobar', is_student: false, city: "Somerville",
+state: "MA", location: "Somerville Public Library")
