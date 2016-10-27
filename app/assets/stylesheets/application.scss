@@ -61,6 +61,7 @@ body {
   display: block;
   overflow: hidden;
   margin: auto;
+
 }
 
 .title-area {
@@ -77,6 +78,13 @@ body {
 
 .profile-head {
   list-style-type: none;
+  text-align: left;
+  font-size: large;
+  margin-left: 0;
+  margin-bottom: 1em;
+  li {
+    margin-bottom: 3%;
+  }
 
 }
 .top-bar {

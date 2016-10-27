@@ -17,7 +17,6 @@ feature 'an authenticated user can upload a profile_photo' do
 
     expect(page).to have_xpath("//img[contains(@src, 'test_profile.jpg')]")
     expect(page).to have_content user.first_name
-    expect(page).to have_content user.last_name
     expect(page).to have_content user.city
     expect(page).to have_content user.location
     expect(page).to have_content user.about_me

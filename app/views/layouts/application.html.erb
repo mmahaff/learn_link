@@ -37,6 +37,11 @@
         <% end %>
       </div>
     </nav>
+    <% if user_signed_in? %>
+      <div id="footer">
+      <%= link_to 'Account Settings', edit_user_registration_path(current_user) %>
+      </div>
+    <% end %>
     <p class="notice"> <%= notice %> </p>
     <p class="alert">  <%= alert %> </p>
     <%= yield %>

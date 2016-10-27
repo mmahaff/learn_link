@@ -6,7 +6,7 @@
       </div>
       <div class="small-8 columns">
 
-        <h1 class="profile-name"><%= @user.first_name%> <%=@user.last_name%></h1>
+        <h1 class="profile-name"><%= @user.first_name%></h1>
         <div class="small-8 columns">
           <ul class="profile-head">
             <% if @user.is_student? %>
@@ -14,9 +14,7 @@
             <% else %>
             <li>Tutor at <%= @user.location %></li>
             <% end %>
-
             <li><%= @user.city %> <%= @user.state %> </li>
-            <li><%= @user.email %></li>
           </ul>
         </div>
         <div class="small-4 columns">
