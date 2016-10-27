@@ -1,9 +1,28 @@
-<div id="row">
-  <h1> Learn Link </h1>
-  <div id=".small-6 large-6 columns">
-  </div>
-  <div id="small-6 large-6 columns">
-        <a class="large button" href="users/sign_up" >Sign Up Here!</a>
+<div class="row">
+  <% if user_signed_in? %>
+    <div class="row">
+      <div class="small-12 small-centered medium-8 medium centered columns news-feed">
+        <aside class="col-md-4">
+          <section class="micropost_form">
+            <%= render 'shared/micropost_form' %>
+          </section>
+        </aside>
+        <div class="medium-8 columns">
+          <h3>Activity Feed</h3>
+          <%= render 'shared/feed' %>
+        </div>
+      </div>
+    </div>
+  <% else %>
+    <div class="row">
+      <div class="column small-6">
+        <h1> Learn Link </h1>
+      </div>
 
-  </div>
+      <div id="column small-6">
+        <a class="large button" href="users/sign_up" >Sign Up Here!</a>
+      </div>
+    </div>
+  <% end %>
+
 </div>

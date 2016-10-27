@@ -16,6 +16,15 @@
             <%= f.radio_button :is_student, false %>
             <%= f.label :is_student, "Tutor", value: false %>
 
+            <%= f.label :city, "City" %>
+            <%= f.text_field :city, autofocus: true %>
+
+            <%= f.label :state, "State" %>
+            <%= f.select :state, options_for_select(us_states), {} %>
+
+            <%= f.label :location, "Home Library" %>
+            <%= f.text_field :location %>
+
             <%= f.label :email, "Email" %><br />
             <%= f.text_field :email, autofocus: true %>
 

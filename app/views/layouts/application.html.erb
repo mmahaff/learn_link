@@ -9,21 +9,33 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Vollkorn">
   </head>
 
   <body>
-    <nav>
-      <ul>
-        <li><%= link_to 'Home', root_path %></li>
+    <nav class="top-bar" data-topbar role='navigation'>
+      <div class="small-7 columns nav-title">
+        <h2><%= link_to 'LearnLink', root_path %></h2>
+      </div>
+      <div class="small-5 columns nav-links">
         <% if user_signed_in? %>
-          <li> <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %> </li>
-          <li> <%= link_to 'Update Account', edit_user_registration_path(current_user) %> </li>
-          <li><%= link_to 'Your Conversations', conversations_path %></li>
+
+            <ul class="right">
+              <li class="active"><%= link_to 'Your Profile', user_path(current_user) %></li>
+              <li class="active"><%= link_to 'People Near You', users_path %></li>
+              <li class="active"> <%= link_to 'Conversations', conversations_path(current_user) %>
+              <li class="active"><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
+            </ul>
+
         <% else %>
-          <li><%= link_to 'Sign In', new_user_session_path %>  </li>
-          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+          <section class="top-bar-section right">
+            <ul class="right">
+              <li class="active"><%= link_to 'Sign In', new_user_session_path %></li>
+              <li class="active"><%= link_to 'Sign Up', new_user_registration_path %></li>
+            </ul>
+          </section>
         <% end %>
-      </ul>
+      </div>
     </nav>
     <p class="notice"> <%= notice %> </p>
     <p class="alert">  <%= alert %> </p>

@@ -13,17 +13,17 @@ $form-padding: $global-padding;
 // Setting the form border radius
 $form-radius: $global-radius;
 
+body {
+  font-family: 'Vollkorn', serif;
+  background-color: #FFFFFF;
+}
 .sign-up-form {
   border: 1px solid $form-border-color;
   padding: $form-padding;
   border-radius: $form-radius;
 }
 
-.messages {
-  max-height: 400px;
-  margin-bottom: 1em;
-  margin-top: 1em;
-}
+
 .bump{
   margin-top: 50px;
   padding-right: 30px;
@@ -33,17 +33,80 @@ $form-radius: $global-radius;
 .profile-circle {
   border: 5px solid $white;
   border-radius: 50%;
-  height: 150px;
+  height: 175px;
   box-shadow: 5px 5px 5px $black;
   overflow: hidden;
   position: relative;
-  width: 150px;
+  width: 175px;
 }
 
 .profile-card {
   border: 5px solid #466d98;
+  text-align: center;
+  background-color: #F2F2F2;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 1%;
+  width: 275px;
+  height: 290px;
+
 }
 
 .profile-list-image {
   border-radius: 50%;
+  width: 40%;
+  height: 40%;
+  display: block;
+  overflow: hidden;
+  margin: auto;
+}
+
+.title-area {
+  list-style-type: none;
+}
+
+.profile-show {
+  margin-top: 5%;
+}
+
+.profile-name {
+  margin-bottom: 35px;
+}
+
+.profile-head {
+  list-style-type: none;
+
+}
+.top-bar {
+  display: flex;
+  align-items: center;
+}
+nav ul li{
+  list-style-type: none;
+  // display: inline-block;
+}
+
+nav ul li a {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.nav-links {
+  ul.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    li {
+      width: 30%;
+      text-align: center;
+    }
+  }
+}
+.columns:last-child:not(:first-child) {
+  float: left;
+}
+.profile-index {
+  text-align: center;
 }

@@ -10,7 +10,7 @@ feature 'user sees list of other users' do
     login_as(user)
     visit users_path
 
-    expect(page).to have_content "List of Tutors"
+    expect(page).to have_content "Connect with tutors near you"
     expect(page).to have_content user_3.first_name
     expect(page).to have_content user_3.city
     expect(page).to have_content user_3.state
@@ -25,7 +25,7 @@ feature 'user sees list of other users' do
     login_as(user_3)
     visit users_path
 
-    expect(page).to have_content "List of Students"
+    expect(page).to have_content "Connect with students near you"
     expect(page).to have_content user.first_name
     expect(page).to have_content user.city
     expect(page).to have_content user.state

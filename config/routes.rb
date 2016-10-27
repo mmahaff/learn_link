@@ -13,4 +13,6 @@ Rails.application.routes.draw do
 
   resources :messages, only: [:new, :create]
 
+  resources :microposts, only: [:create, :destroy]
+
 end

@@ -5,15 +5,20 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   validates :email, presence: true
   validates_inclusion_of :is_student, in: [true, false]
+  has_many :microposts
 
   acts_as_messageable
 
   def name
-    "User #{id}: " + "#{first_name} " + "#{last_name}"
+    "#{first_name} " + "#{last_name}"
   end
 
   def mailboxer_email(object)
     return "define_email@on_your.model"
+  end
+
+  def feed
+    Micropost.where("user_id = ?", id)
   end
 
   # Include default devise modules. Others available are:

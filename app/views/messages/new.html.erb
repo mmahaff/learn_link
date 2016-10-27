@@ -1,20 +1,26 @@
-<h1>Start Conversation</h1>
+<div class="row">
+  <h1>Start Conversation</h1>
 
-<%= form_tag messages_path, method: :post do %>
-  <div>
-    <%= label_tag 'message[subject]', 'Subject' %>
-    <%= text_field_tag 'message[subject]', nil, class: 'form-control', required: true %>
+  <div class="small-8 small-centered columns messages">
+
+    <%= form_tag messages_path, method: :post do %>
+      <div>
+        <%= label_tag 'message[subject]', 'Subject' %>
+        <%= text_field_tag 'message[subject]', nil, class: 'form-control', required: true %>
+      </div>
+
+      <div>
+        <%= label_tag 'message[body]', 'Message' %>
+        <%= text_area_tag 'message[body]', nil, class: 'form-control', required: true %>
+      </div>
+
+      <div>
+        <%= label_tag 'recipients', 'Send to:' %>
+        <%= select_tag 'recipients', recipients_options(@chosen_recipient), multiple: true, class: 'form-control chosen-it'%>
+      </div>
+
+      <%= submit_tag 'Send'%>
+    <% end %>
   </div>
 
-  <div>
-    <%= label_tag 'message[body]', 'Message' %>
-    <%= text_area_tag 'message[body]', nil, class: 'form-control', required: true %>
-  </div>
-
-  <div>
-    <%= label_tag 'recipients', 'Send to:' %>
-    <%= select_tag 'recipients', recipients_options(@chosen_recipient), multiple: true, class: 'form-control chosen-it'%>
-  </div>
-
-  <%= submit_tag 'Send'%>
-<% end %>
+</div>

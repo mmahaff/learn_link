@@ -1,9 +1,9 @@
 <div class="row">
-  <h1>List of Students</h1>
+  <h2>Connect with students near you</h2>
   <% @users.each do |user| %>
   <div class="small-12 medium-4 columns profile-card">
       <div class="small-12 columns">
-        <img class="profile-list-image" src="http://api.randomuser.me/portraits/med/women/82.jpg">
+        <%= image_tag user.profile_photo.large_profile_picture, class: 'profile-list-image' %>
       </div>
       <div class="small-12 columns">
         <h4><%= link_to user.first_name, user_path(user)%></h4>
