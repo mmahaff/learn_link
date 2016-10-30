@@ -1,8 +1,9 @@
 @import "*";
 @import 'foundation';
+/*
 *= require slick
 *= require slick-theme
-
+*/
 
 $medium-gray: #cacaca;
 
@@ -26,13 +27,11 @@ body {
   padding: $form-padding;
   border-radius: $form-radius;
 }
-
 .bump{
   margin-top: 50px;
   padding-right: 30px;
   padding-left:30px;
 }
-
 .profile-circle {
   border: 5px solid $white;
   border-radius: 50%;
@@ -42,7 +41,6 @@ body {
   position: relative;
   width: 175px;
 }
-
 .profile-card {
   border: 5px solid #466d98;
   text-align: center;
@@ -54,9 +52,7 @@ body {
   margin: 1%;
   width: 275px;
   height: 290px;
-
 }
-
 .profile-list-image {
   border-radius: 50%;
   width: 40%;
@@ -64,13 +60,10 @@ body {
   display: block;
   overflow: hidden;
   margin: auto;
-
 }
-
 .title-area {
   list-style-type: none;
 }
-
 .profile-show {
   margin-top: 5%;
 }
@@ -88,7 +81,6 @@ body {
   li {
     margin-bottom: 3%;
   }
-
 }
 .top-bar {
   display: flex;
@@ -129,13 +121,22 @@ nav ul li a {
     padding: 1px;
   }
 }
-
 .message-block {
   border: 1px solid;
   padding: 1em;
   margin: 1em;
 }
-
 .message-reply {
   padding: 1em;
+}
+.home-image {
+  height: 40%;
+  width: 70%;
+  margin: auto;
+  margin-top: 10px;
+  padding: 10px;
+  display: block;
+}
+.home-headline {
+  text-align: center;
 }

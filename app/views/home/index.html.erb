@@ -15,15 +15,22 @@
     </div>
   <% else %>
     <div class="single-item">
-      <div>
-        <img src="http://placehold.it/1000x300/A92B48/fff" alt="slide 1"/>
+      <div class="library">
+        <%= image_tag('library.jpeg', alt: "slide 2", class: 'home-image') %>
+        <h4 class="home-headline">Learn.</h4>
+        <h5 class="home-headline">Find tutors at your local library</h5>
       </div>
-        <img src="http://placehold.it/1000x300/A92B48/fff" alt="slide 2"/>
       <div>
-        <img src="http://placehold.it/1000x300/A92B48/fff" alt="slide 3"/>
+        <%= image_tag('coffee_image.jpeg', alt: "slide 1", class: 'home-image') %>
+        <h4 class="home-headline">Teach.</h4>
+        <h5 class="home-headline">Share your knowledge with English language learners</h5>
+      </div>
+      <div>
+        <%= image_tag('people.jpeg', alt: "slide 1", class: 'home-image') %>
+        <h4 class="home-headline">Connect.</h4>
       </div>
     </div>
 
   <% end %>
 </div>
-<script>$('.single-item').slick();</script>
+<script>$('.single-item').slick({dots: true});</script>
