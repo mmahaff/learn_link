@@ -1,5 +1,7 @@
 @import "*";
 @import 'foundation';
+*= require slick
+*= require slick-theme
 
 
 $medium-gray: #cacaca;
