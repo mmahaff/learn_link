@@ -1,4 +1,5 @@
 @import "*";
+@import 'foundation';
 
 
 $medium-gray: #cacaca;
@@ -23,7 +24,6 @@ body {
   padding: $form-padding;
   border-radius: $form-radius;
 }
-
 
 .bump{
   margin-top: 50px;
@@ -94,7 +94,6 @@ body {
 }
 nav ul li{
   list-style-type: none;
-  // display: inline-block;
 }
 
 nav ul li a {
@@ -118,4 +117,23 @@ nav ul li a {
 }
 .profile-index {
   text-align: center;
+}
+
+.conversation-list {
+  border: 2px solid #466d98;
+  padding: 2px;
+  list-style-type: none;
+  li {
+    padding: 1px;
+  }
+}
+
+.message-block {
+  border: 1px solid;
+  padding: 1em;
+  margin: 1em;
+}
+
+.message-reply {
+  padding: 1em;
 }

@@ -1,17 +1,10 @@
 <div class="row">
-
   <div class="small-12 small-centered medium-6 medium-centered columns">
-  <h1>Your Conversations</h1>
-
-  <a class="large button" href="messages/new" >Start new conversation</a>
-
-  <div>
-
-  </div>
-
-  <%= render partial: 'conversations/conversation', collection: @conversations %>
-
-  <%= will_paginate %>
-
+    <h1>Your Conversations</h1>
+    <a class="large button" href="messages/new" >Start new conversation</a>
+      <div class="conversation-list"
+        <%= render partial: 'conversations/conversation', collection: @conversations %>
+        <%= will_paginate %>
+      </div>
   </div>
 </div>
