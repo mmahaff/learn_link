@@ -27,11 +27,11 @@ LearnLink is a Ruby on Rails social media application which aims to connect adul
 
 The app uses Ruby version 2.3.1 and Rails version 5.0.0.1. To install please run the following in your terminal:
 
-```git clone https://github.com/mmahaff/learn_link.git
-cd learn_link
-bundle install
-rake db:create
-rake db:migrate
-rails server```
+`git clone https://github.com/mmahaff/learn_link.git`
+`cd learn_link`
+`bundle install`
+`rake db:create`
+`rake db:migrate`
+`rails server`
 
 ![Build Status](https://codeship.com/projects/25b5def0-7520-0134-51f2-1eaf12e437c5/status?branch=master)
