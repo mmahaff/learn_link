@@ -14,16 +14,23 @@
       </div>
     </div>
   <% else %>
-    <div class="row">
-      <div class="column small-6">
-        <h1> Connect with people in your community. </h1>
+    <div class="single-item">
+      <div class="library">
+        <%= image_tag('library.jpeg', alt: "slide 2", class: 'home-image') %>
+        <h4 class="home-headline">Learn.</h4>
+        <h5 class="home-headline">Find tutors at your local library</h5>
       </div>
-
-      <div id="column small-6">
-
-        <a class="large button" href="users/sign_up" >Sign Up Here!</a>
+      <div>
+        <%= image_tag('coffee_image.jpeg', alt: "slide 1", class: 'home-image') %>
+        <h4 class="home-headline">Teach.</h4>
+        <h5 class="home-headline">Share your knowledge with English language learners</h5>
+      </div>
+      <div>
+        <%= image_tag('people.jpeg', alt: "slide 1", class: 'home-image') %>
+        <h4 class="home-headline">Connect.</h4>
       </div>
     </div>
-  <% end %>
 
+  <% end %>
 </div>
+<script>$('.single-item').slick({dots: true});</script>

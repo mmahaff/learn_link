@@ -1,5 +1,4 @@
-<li class="list-group-item clearfix">
-  <%= link_to conversation.subject, conversation_path(conversation) %>
-
-  <p><%= conversation.last_message.body %>
-</li>
+<ul class="inbox-conversation">
+  <li><%= link_to conversation.subject, conversation_path(conversation) %></li>
+  <li><%= conversation.last_message.body %></li>
+</ul>

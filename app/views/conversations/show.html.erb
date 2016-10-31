@@ -3,14 +3,15 @@
 
     <div class="row">
       <div class="messages">
-        <h2><%= @conversation.subject %></h2>
+        <h2>Subject: <%= @conversation.subject %></h2>
 
         <% @conversation.receipts_for(current_user).each do |receipt| %>
           <div class="message-block">
 
             <% message = receipt.message %>
-            <h4><%= message.sender.name %></h4>
-              says at <%= message.created_at.strftime("%-d %B %Y, %H:%M:%S") %>
+            <h4>From: <%= message.sender.name %></h4>
+            Sent on: <%= message.created_at.strftime("%-d %B %Y at %H:%M") %>
+            <hr>
             <p><%= message.body %><p>
           </div>
         <% end  %>
@@ -21,7 +22,7 @@
           <%= text_area_tag 'body', nil, class: 'form-control', placeholder: 'Reply here', required: true %>
         </div>
 
-        <%= submit_tag "Send Message" %>
+        <%= submit_tag "Send Message", class: 'button' %>
       <% end  %>
     </div>
 
