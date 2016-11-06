@@ -19,4 +19,13 @@ RSpec.describe User, type: :model do
     expect(user.errors[:password_confirmation]).to_not be_blank
   end
 
+  describe '.email' do
+    it 'returns the email of the user' do
+      user = FactoryGirl.create(:user, email: 'example@example.com')
+        email = user.email
+
+        expect(email).to eq('example@example.com')
+    end
+  end
+
 end
