@@ -16,6 +16,7 @@ gem 'fog'
 gem 'mailboxer'
 gem 'will_paginate', '~> 3.1.0'
 gem 'faker'
+gem 'yelp', require: 'yelp'
 group :development, :test do
   gem 'capybara'
   gem 'factory_girl_rails'
