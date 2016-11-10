@@ -49,13 +49,11 @@
               </section>
             </aside>
           <% end %>
-
           <% if @user.microposts.any? %>
-
-          <ul class="microposts">
-            <%= render @microposts %>
-          </ul>
-          <%= will_paginate @microposts %>
+            <ul class="microposts">
+              <%= render @microposts %>
+            </ul>
+            <%= will_paginate @microposts %>
           <% end %>
         </div>
       </div>
