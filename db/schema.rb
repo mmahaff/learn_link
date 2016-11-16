@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161025194639) do
+ActiveRecord::Schema.define(version: 20161116193540) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "home_libraries", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "library_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "libraries", force: :cascade do |t|
+    t.string "name"
+    t.string "phone"
+    t.string "zip"
+    t.string "city"
+    t.string "hours"
+  end
 
   create_table "mailboxer_conversation_opt_outs", force: :cascade do |t|
     t.string  "unsubscriber_type"
