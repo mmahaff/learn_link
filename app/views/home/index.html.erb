@@ -33,4 +33,6 @@
 
   <% end %>
 </div>
-<script>$('.single-item').slick({dots: true});</script>
+<script>$('.single-item').on('init', function(slick) {
+  console.log('fired!');
+}).slick({dots: true, lazyLoad: 'ondemand'});</script>
