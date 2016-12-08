@@ -80,6 +80,7 @@
     }
 
     .slick-initialized & {
+      visibility: visible;
         display: block;
     }
 
